@@ -55,3 +55,22 @@
         background-color: #383838;
     }
 }
+/* Mobile styles — keep sidebar visible */
+@media (max-width: 599px) {
+    .sidebar {
+        width: 60px;
+    }
+
+    .sidebar-link button {
+        width: 60px;
+        height: 70px;
+    }
+
+    .sidebar-link img {
+        width: 18px;
+    }
+
+    .sidebar-link p {
+        font-size: 10px;
+    }
+}
