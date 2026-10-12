@@ -61,26 +61,21 @@
     width: 120px;
     height: 59px;
     object-fit: contain;
-    
 }
-
-
 
 .searchbar{
     display: flex;
     flex: 1;
     height: 39px;
     padding-left: 10px;
-    width: 0px;
-    min-width: 0px;
+    width: 0;
+    min-width: 0;
     font-size: 15px;
     border: 1px solid gray;
     border-radius: 20px 0px 0px 20px;
     outline-color: rgb(0, 102, 255);
     box-sizing: border-box;
 }
-
-
 
 .search-button{
     height: 39px;
@@ -103,7 +98,6 @@
     cursor: pointer;
 }
 
-
 .create-button {
     background-color: #e5e5e5;
     color: black;
@@ -116,7 +110,6 @@
     align-items: center;
     margin-left: 10px;
 }
-
 
 .yt-apps-button {
     border: none;
@@ -133,7 +126,6 @@
     width: 30px;
 }
 
-
 .notifications-button{
     margin-top: 5px;
     background-color: white;
@@ -143,8 +135,6 @@
     cursor: pointer;
     position: relative;
 }
-
-
 
 .notification-count{
     position: absolute;
@@ -219,7 +209,6 @@
     opacity: 1;
 }
 
-
 @media (prefers-color-scheme: dark) {
     .header{
         background-color: #121212;
@@ -287,5 +276,66 @@
 
     .notifications-icon{
         filter: invert(1);
+    }
+}
+
+@media (max-width: 599px) {
+    .header {
+        justify-content: flex-start;
+        gap: 0;
+    }
+
+    .left-section {
+        width: auto;
+        flex-shrink: 0;
+        gap: 8px;
+    }
+
+    .menu-button {
+        margin-left: 10px;
+    }
+
+    #light-logo {
+        width: 80px;
+    }
+
+    #dark-logo {
+        width: 80px;
+    }
+
+    .middle-section {
+        flex: 1;
+        min-width: 0;
+        max-width: none;
+        margin-left: 12px;
+        margin-right: 10px;
+    }
+
+    .searchbar {
+        flex: 1;
+        width: 0;
+        min-width: 0;
+        height: 36px;
+        padding-left: 10px;
+        font-size: 14px;
+    }
+
+    .searchbar::placeholder {
+        font-size: 14px;
+    }
+
+    .search-button {
+        flex-shrink: 0;
+        width: 40px;
+        height: 36px;
+        margin-right: 0;
+    }
+
+    .voice-search-button {
+        display: none;
+    }
+
+    .right-section {
+        display: none;
     }
 }
