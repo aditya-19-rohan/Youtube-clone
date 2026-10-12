@@ -1,0 +1,13 @@
+body{
+    font-family: roboto,arial;
+    margin:10px;
+    padding-top: 70px;
+    padding-left: 95px;
+    background-color: rgb(245, 245, 245);
+}
+
+@media(prefers-color-scheme: dark){
+    body{
+        background-color: #181818;
+    }
+}

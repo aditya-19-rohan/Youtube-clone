@@ -1,0 +1,291 @@
+.header{
+    height: 55px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    z-index: 1000;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.left-section{
+    display:flex;
+    width: 200px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.middle-section{
+    display:flex;
+    flex: 1;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 30px;
+    margin-left: 70px;
+    max-width: 700px;
+}
+
+.right-section{
+    width: 300px;
+    min-width: 0;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    margin-right: 20px;
+    margin-left: 10px;
+}
+
+.menu-button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: 22px;
+}
+
+#light-logo {
+    width: 100px;
+    height: 59px;
+    object-fit: contain;
+}
+
+#dark-logo {
+    display: none;
+    width: 120px;
+    height: 59px;
+    object-fit: contain;
+    
+}
+
+
+
+.searchbar{
+    display: flex;
+    flex: 1;
+    height: 39px;
+    padding-left: 10px;
+    width: 0;
+    min-width: 0;
+    font-size: 15px;
+    border: 1px solid gray;
+    border-radius: 20px 0px 0px 20px;
+    outline-color: rgb(0, 102, 255);
+    box-sizing: border-box;
+}
+
+
+
+.search-button{
+    height: 39px;
+    width: 50px;
+    background-color: #f8f8f8;
+    border: 1px solid #bbb;
+    border-left: none;
+    border-radius: 0px 20px 20px 0px;
+    cursor: pointer;
+    margin-right: 20px;
+    position: relative;
+}
+
+.voice-search-button{
+    height: 39px;
+    width: 39px;
+    background-color: #e5e5e5;
+    border: 1px solid #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+.create-button {
+    background-color: #e5e5e5;
+    color: black;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 12px;
+    font-size: 14px;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    margin-left: 10px;
+}
+
+
+.yt-apps-button {
+    border: none;
+    border-radius: 50%;
+    padding-top: 3px;
+    padding-bottom: 2px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.yt-apps {
+    filter: invert(0);
+    height: 30px;
+    width: 30px;
+}
+
+
+.notifications-button{
+    margin-top: 5px;
+    background-color: white;
+    padding: 5px 5px 5px 5px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    position: relative;
+}
+
+
+
+.notification-count{
+    position: absolute;
+    top: 0px;
+    right: -2px;
+    width: 14px;
+    height: 14px;
+    padding: 3px;
+    background-color: red;
+    border-radius: 50%;
+    font-size: 12px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.notifications-icon{
+    filter: invert(0);
+    height: 30px;
+    width: 30px;
+}
+
+.my-channel-button{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: none;
+    padding: 0px;
+    cursor: pointer;
+}
+
+.my-channel-pic{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.search-button, .voice-search-button, .create-button, .yt-apps-button, .notifications-button, .my-channel-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-button .tool-tip,
+.voice-search-button .tool-tip,
+.create-button .tool-tip,
+.yt-apps-button .tool-tip,
+.notifications-button .tool-tip,
+.my-channel-button .tool-tip {
+    position: absolute;
+    bottom: -30px;
+    background-color: gray;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 2px;
+    font-size: 12px;
+    opacity: 0;
+    pointer-events: none;
+    white-space: nowrap;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.search-button:hover .tool-tip,
+.voice-search-button:hover .tool-tip,
+.create-button:hover .tool-tip,
+.yt-apps-button:hover .tool-tip,
+.notifications-button:hover .tool-tip,
+.my-channel-button:hover .tool-tip {
+    opacity: 1;
+}
+
+
+@media (prefers-color-scheme: dark) {
+    .header{
+        background-color: #121212;
+        border-bottom: 1px solid #333;
+    }
+
+    .menu-button{
+        filter: invert(1);
+    }
+
+    #light-logo{
+        display: none;
+    }
+
+    #dark-logo{
+        display: inline-block;
+    }
+
+    .searchbar {
+        background-color: #121212;
+        color: white;
+        border-color: #444;
+    }
+
+    .searchbar::placeholder {
+        color: #aaaaaa;
+    }
+
+    .search-button{
+        filter: invert(1);
+    }
+
+    .voice-search-button{
+        filter: invert(1);
+    }
+
+    .create-button {
+        background-color: #393939;
+        color: white;
+        border: none;
+        border-radius: 20px;
+        padding: 8px 12px;
+        font-size: 14px;
+        display: flex;
+        cursor: pointer;
+        margin-left: 10px;
+    }
+
+    .create-icon{
+        filter: invert(1);
+        padding-right: 5px;
+    }
+
+    .yt-apps-button {
+        filter: invert(1);
+    }
+
+    .notifications-button{
+        background-color: #121212;
+        padding: 3px;
+        border-radius: 50%;
+        border: none;
+        cursor: pointer;
+    }
+
+    .notifications-icon{
+        filter: invert(1);
+    }
+}
