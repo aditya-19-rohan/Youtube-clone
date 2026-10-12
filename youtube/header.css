@@ -71,8 +71,8 @@
     flex: 1;
     height: 39px;
     padding-left: 10px;
-    width: 100px;
-    min-width: 100px;
+    width: 0px;
+    min-width: 0px;
     font-size: 15px;
     border: 1px solid gray;
     border-radius: 20px 0px 0px 20px;
